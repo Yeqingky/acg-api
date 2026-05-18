@@ -32,7 +32,7 @@ docker compose up -d
 
 5. 配置Nginx
 
-这是与一份Nginx监听80端口 套CDN的配置文件 不包含HTTPS/SSL
+这是一份Nginx监听80端口 套CDN的配置文件 不包含HTTPS/SSL
 
 ```conf
 server {
