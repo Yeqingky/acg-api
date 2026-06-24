@@ -20,7 +20,7 @@ curl -fsSL https://get.docker.com | bash -s docker
 2. Git Clone
 
 ```bash
-git clone https://gitea.890100.xyz/yeqing/acg-api.git
+git clone https://git.yeqing.dev/yeqing/acg-api.git
 ```
 
 4. 启用容器
