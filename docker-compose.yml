@@ -1,0 +1,10 @@
+services:
+  acg-api:
+    image: php:8.0-fpm
+    container_name: acg-api
+    restart: always
+    working_dir: /var/www/html
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "127.0.0.1:9000:9000"
