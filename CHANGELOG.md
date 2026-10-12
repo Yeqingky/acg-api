@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-12
+
+### Changed
+
+- 图片链接由 `list.yppp.net` 更换为 `cdn.yppp.net/acg/`。
+- 图片统一为 webp 格式,横图 420 张使用 `pc/`,竖图 930 张使用 `pe/`。
+
 ## 2026-06-20
 
 ### Added
