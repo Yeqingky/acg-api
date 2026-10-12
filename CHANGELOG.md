@@ -5,7 +5,8 @@
 ### Changed
 
 - 图片链接由 `list.yppp.net` 更换为 `cdn.yppp.net/acg/`。
-- 图片统一为 webp 格式,横图 420 张使用 `pc/`,竖图 930 张使用 `pe/`。
+- 图片统一为 webp 格式,横图 420 张使用 `pc/`,竖图 929 张使用 `pe/`。
+- 调整横竖图归类:`pc/60.webp` 与 `pe/595.webp` 互换内容,原 `pe/798.webp` 删除,原 `pe/930.webp` 改名补入 `pe/798.webp`。
 
 ## 2026-06-20
 
