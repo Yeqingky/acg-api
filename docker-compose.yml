@@ -1,7 +1,7 @@
 services:
   acg-api:
-    build: .
-    image: acg-api:latest
+    image: ghcr.io/yeqingky/acg-api:latest
+    # 中国大陆可使用 ghcr.nju.edu.cn/yeqingky/acg-api:latest
     container_name: acg-api
     restart: always
     # 兼容 .php 旧路径时取消注释

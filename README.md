@@ -44,8 +44,10 @@ git clone https://github.com/Yeqingky/acg-api.git
 
 ```bash
 cd acg-api
-docker compose up -d --build
+docker compose up -d
 ```
+
+镜像为 `ghcr.io/yeqingky/acg-api:latest`, 中国大陆可使用 `ghcr.nju.edu.cn/yeqingky/acg-api:latest`.
 
 图片列表位于 `data/acg_横图.txt` 与 `data/acg_竖图.txt`, 由 `./data:/app/data:ro` 挂载进容器, 不打进镜像.
 
