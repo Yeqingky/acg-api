@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-10-22
+
+### Changed
+
+- 使用 Go 重写, 移除 PHP 与 PHP-FPM 依赖, 部署改为单个静态二进制与多阶段构建镜像.
+- 接口路径改为 `api`, `pc`, `pe`, `test`, 保留 `return=json` 与 `return=all` 参数.
+- 新增 `-php-compat` 参数, 开启后额外注册 `api.php`, `pc.php`, `pe.php`, `test.php`, 默认关闭.
+- 图片列表移入 `data` 目录, 由 `-pc` 与 `-pe` 指定路径, 容器内通过 `./data:/app/data:ro` 挂载.
+- CORS 与 `OPTIONS` 由服务自身处理, Nginx 改为纯反向代理.
+- 图片列表文件按 `mtime` 与文件大小自动重载, 更新后无需重启容器.
+- 图片列表中的空行被忽略.
+- 工具链升级至 Go 1.27.3, `golang.org/x/image` 升级至 v0.47.0.
+
+### Fixed
+
+- `return=json` 的图片尺寸查询增加 10 秒超时, 慢速 CDN 不再无限阻塞请求.
+- 修复 `GO-2026-6809` 证书校验, `GO-2026-6222` VP8L 解码内存分配, `GO-2026-5061` 与 `GO-2026-4961` webp 解码 panic.
+
 ## 2026-10-12
 
 ### Changed
