@@ -89,7 +89,7 @@ jobs:
           go-version-file: go.mod
           cache: true
 
-      - name: Build and archive
+      - name: Build
         env:
           GOOS: ${{ matrix.goos }}
           GOARCH: ${{ matrix.goarch }}
@@ -100,14 +100,9 @@ jobs:
           if [ "$GOOS" = "windows" ]; then
             ext=".exe"
           fi
-          name="acg-api_${GITHUB_REF_NAME}_${GOOS}_${GOARCH}"
-          mkdir -p build dist
-          go build -trimpath -ldflags='-s -w' -o "build/${name}${ext}" .
-          if [ "$GOOS" = "windows" ]; then
-            (cd build && zip -q "../dist/${name}.zip" "${name}${ext}")
-          else
-            tar -czf "dist/${name}.tar.gz" -C build "${name}${ext}"
-          fi
+          mkdir -p dist
+          go build -trimpath -ldflags='-s -w' \
+            -o "dist/acg-api_${GITHUB_REF_NAME}_${GOOS}_${GOARCH}${ext}" .
 
       - uses: actions/upload-artifact@v4
         with:
