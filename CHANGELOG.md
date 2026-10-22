@@ -12,6 +12,8 @@
 - 图片列表文件按 `mtime` 与文件大小自动重载, 更新后无需重启容器.
 - 图片列表中的空行被忽略.
 - 工具链升级至 Go 1.27.3, `golang.org/x/image` 升级至 v0.47.0.
+- 默认监听端口改为 8080.
+- 新增 GitHub Actions 工作流: 提交与 PR 构建 `linux/amd64` 与 `linux/arm64` 镜像并使用短 hash 标签, tag 构建 `vX.X.X` 与 `latest` 镜像, 并发布 Windows 与 Linux 的 amd64/arm64 二进制到 Release.
 
 ### Fixed
 

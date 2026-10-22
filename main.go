@@ -25,7 +25,7 @@ import (
 )
 
 const (
-	addrDefault = ":9000"
+	addrDefault = ":8080"
 	dataDir     = "data"
 
 	widthFile  = "acg_横图.txt"

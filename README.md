@@ -64,7 +64,7 @@ server {
 
     # 全部请求交给 acg-api
     location / {
-        proxy_pass http://127.0.0.1:9000 ;
+        proxy_pass http://127.0.0.1:8080 ;
         proxy_set_header Host $host ;
         proxy_set_header X-Real-IP $remote_addr ;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for ;
@@ -79,7 +79,7 @@ server {
 | --- | --- | --- |
 | `-pc` | `data/acg_横图.txt` | 横图地址列表文件路径 |
 | `-pe` | `data/acg_竖图.txt` | 竖图地址列表文件路径 |
-| `-addr` | `:9000` | 监听地址 |
+| `-addr` | `:8080` | 监听地址 |
 | `-php-compat` | `false` | 额外注册 `.php` 后缀的旧路径 |
 
 图片列表文件按 `mtime` 与文件大小自动重载, 更新列表后无需重启容器.
