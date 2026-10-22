@@ -13,7 +13,8 @@
 - 图片列表中的空行被忽略.
 - 工具链升级至 Go 1.27.3, `golang.org/x/image` 升级至 v0.47.0.
 - 默认监听端口改为 8080.
-- 新增 GitHub Actions 工作流: 提交与 PR 构建 `linux/amd64` 与 `linux/arm64` 镜像并使用短 hash 标签, tag 构建 `vX.X.X` 与 `latest` 镜像, 并发布 Windows 与 Linux 的 amd64/arm64 二进制到 Release.
+- `docker-compose.yml` 增加注释形式的 `-php-compat` 示例.
+- 新增 GitHub Actions 工作流: 提交与 PR 构建 `linux/amd64` 与 `linux/arm64` 镜像并使用短 hash 标签, tag 构建 `vX.X.X` 与 `latest` 镜像, 并发布 Windows 与 Linux 的 amd64/arm64 二进制到 Release, 资产为未压缩可执行文件.
 
 ### Fixed
 
