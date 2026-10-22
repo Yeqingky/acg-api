@@ -4,6 +4,8 @@ services:
     image: acg-api:latest
     container_name: acg-api
     restart: always
+    # 兼容 .php 旧路径时取消注释
+    # command: ["-php-compat"]
     volumes:
       - ./data:/app/data:ro
     ports:
