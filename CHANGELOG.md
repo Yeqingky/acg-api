@@ -8,7 +8,7 @@
 
 ### Changed
 
-- GitHub Actions 工作流忽略仅改动 `data` 目录的提交, tag 推送仍正常触发发布.
+- GitHub Actions 工作流忽略仅改动 `data` 目录或 Markdown 文件的提交, tag 推送仍正常触发发布.
 
 ## 2026-10-22
 
