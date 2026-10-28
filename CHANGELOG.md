@@ -6,6 +6,10 @@
 
 - 新增 20 张横图、47 张竖图。
 
+### Changed
+
+- GitHub Actions 工作流忽略仅改动 `data` 目录的提交, tag 推送仍正常触发发布.
+
 ## 2026-10-22
 
 ### Changed

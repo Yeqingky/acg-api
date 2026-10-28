@@ -6,9 +6,13 @@ on:
       - main
     tags:
       - 'v*'
+    paths-ignore:
+      - 'data/**'
   pull_request:
     branches:
       - main
+    paths-ignore:
+      - 'data/**'
 
 permissions:
   contents: write
